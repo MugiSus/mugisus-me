@@ -6,14 +6,25 @@ export default function Home() {
         <p>MINATO Masayuki</p>
         <p>湊 真之</p>
       </div>
-      <ul class="text-3xl fixed left-16 bottom-16 text-emerald-950 flex flex-col gap-0">
-        <li>
-          <a href="https://github.com/mugisus" class="underline underline-offset-4 decoration-2">GitHub: mugisus</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/mugisus" class="underline underline-offset-4 decoration-2">X: mugisus</a>
-        </li>
-      </ul>
+
+      <div class="fixed left-16 bottom-16 flex gap-12 flex-col">
+        <ul class="text-3xl text-emerald-950 flex flex-col gap-2">
+          <li>
+            <a href="https://sundial.mugisus.me" class="underline underline-offset-4 decoration-2">Sundial</a>
+          </li>
+          <li>
+            <a href="https://signsystemme.vercel.app" class="underline underline-offset-4 decoration-2">SSM</a>
+          </li>
+        </ul>
+        <ul class="text-3xl text-emerald-950 flex flex-col gap-2">
+          <li>
+            <a href="https://github.com/mugisus" class="underline underline-offset-4 decoration-2">GitHub: mugisus</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/mugisus" class="underline underline-offset-4 decoration-2">X: mugisus</a>
+          </li>
+        </ul>
+      </div>
     </main>
   );
 }
