@@ -82,7 +82,7 @@ void main(void) {
   float val = snoise(vec3(pos.x, pos.y, uTime / 100.0 + uScroll / 4800.0));
   float vnorm = (val + 1.0) / 2.0;
 
-  float a = clamp(floor(vnorm * 12.0) / 12.0, 0.0, 1.0) - mod(vnorm, 1.0 / 12.0) * 0.2;
+  float a = clamp(floor(vnorm * 12.0) / 12.0 - mod(vnorm, 1.0 / 12.0) * 0.2 + 0.1, 0.0, 1.0);
   vec3 color = mix(uColor2, uColor1, a);
 
   gl_FragColor = vec4(color, 1.0);
