@@ -79,12 +79,12 @@ float snoise(vec3 v) {
 }
 
 void main(void) {
-  vec2 pos = (gl_FragCoord.xy) / 2400.0;
+  vec2 pos = (gl_FragCoord.xy + vec2(uTime * 10.0, uTime * -10.0 + uScroll / -4800.0)) / 2400.0;
 
-  float val = snoise(vec3(pos.x, pos.y + uScroll / -4800.0, uTime / 40.0 + uScroll / 4800.0));
+  float val = snoise(vec3(pos.x, pos.y, uTime / 100.0 + uScroll / 4800.0));
   float vnorm = (val + 1.0) / 2.0;
 
-  float a = clamp(floor(vnorm * 8.0) * 0.2, 0.0, 1.0);
+  float a = clamp(floor(vnorm * 12.0) / 12.0, 0.0, 1.0) - vnorm * 0.1;
   vec3 color = mix(uColor2, uColor1, a);
 
   gl_FragColor = vec4(color, 1.0);

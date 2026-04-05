@@ -25,8 +25,8 @@ export default function GradientBackground() {
       uniforms: {
         uTime: { value: 0 },
         uScroll: { value: 0 },
-        uColor1: { value: [251 / 255, 251 / 255, 251 / 255] },
-        uColor2: { value: [221 / 255, 221 / 255, 221 / 255] },
+        uColor1: { value: [207 / 255, 227 / 255, 27 / 255] },
+        uColor2: { value: [34 / 255, 88 / 255, 66 / 255] },
       },
     });
 
@@ -61,15 +61,7 @@ export default function GradientBackground() {
   return (
     <canvas
       ref={canvasRef}
-      style={{
-        position: 'fixed',
-        top: 0,
-        left: 0,
-        width: '100%',
-        height: '100%',
-        "z-index": -1,
-        "pointer-events": 'none',
-      }}
+      class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
     />
   );
 }
