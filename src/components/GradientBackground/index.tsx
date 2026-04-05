@@ -19,7 +19,7 @@ export default function GradientBackground() {
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
     const geometry = new THREE.PlaneGeometry(2, 2);
-    const material = new THREE.ShaderMaterial({
+    const material = new THREE.RawShaderMaterial({
       fragmentShader,
       vertexShader,
       uniforms: {
