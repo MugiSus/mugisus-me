@@ -7,7 +7,7 @@ export default function HomePage() {
       <div class='fixed top-0 left-0 flex flex-col gap-0 p-12 text-3xl text-emerald-950'>
         <p>MUGISUS</p>
         <p>Masayuki Minato</p>
-        <img src='/public/name-ja.svg' alt='湊 真之' class='my-2 h-8 w-fit' />
+        <p class='mt-1.5'>湊 真之</p>
       </div>
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>

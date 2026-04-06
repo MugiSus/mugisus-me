@@ -1,9 +1,10 @@
-import { onMount, onCleanup } from 'solid-js';
+import { createSignal, onCleanup, onMount } from 'solid-js';
 import * as THREE from 'three';
 import fragmentShader from './fragment.frag?raw';
 import vertexShader from './vertex.vert?raw';
 
 export default function GradientBackground() {
+  const [isReady, setIsReady] = createSignal(false);
   let canvasRef: HTMLCanvasElement | undefined;
   let reqId: number;
 
@@ -39,17 +40,25 @@ export default function GradientBackground() {
 
     const clock = new THREE.Clock();
 
-    const render = () => {
+    const renderFrame = () => {
       material.uniforms.uTime.value = (clock.getElapsedTime() % 6000) / 400;
       material.uniforms.uScroll.value = window.scrollY;
       renderer.render(scene, camera);
+    };
+
+    const render = () => {
+      renderFrame();
       reqId = requestAnimationFrame(render);
     };
 
+    renderer.compile(scene, camera);
+    renderFrame();
+    requestAnimationFrame(() => setIsReady(true));
     reqId = requestAnimationFrame(render);
 
     const handleResize = () => {
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderFrame();
     };
     window.addEventListener('resize', handleResize);
 
@@ -65,7 +74,11 @@ export default function GradientBackground() {
   return (
     <canvas
       ref={(el) => (canvasRef = el)}
-      class='animate-fade-in pointer-events-none fixed top-0 left-0 -z-10 h-full w-full [animation-delay:3s]'
+      class='pointer-events-none fixed top-0 left-0 -z-10 h-full w-full transition-opacity duration-5000 ease-in-out'
+      classList={{
+        'opacity-0': !isReady(),
+        'opacity-100': isReady(),
+      }}
     />
   );
 }
