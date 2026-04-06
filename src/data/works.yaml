@@ -1,0 +1,123 @@
+- id: portfolio-2026
+  href: https://mugisus.me
+  title: Portfolio 2026
+  date: 2026-04-07
+
+- id: sign-system-me
+  href: https://signsystemme.vercel.app/
+  title: Sign System Me
+  date: 2024-12-07
+
+# - id: mitou-jr-demo-day-pamphlet-2024
+#   title: A Pamphlet for Mitou Junior Demo Day 2024
+#   date: 2024-11-03
+
+- id: the-sundial
+  href: https://themostaccurateclockyouveeverseen.mugisus.com/
+  title: The Most Accurate Clock You've Ever Seen
+  date: 2024-09-30
+
+# - id: tokyo-coastline-railway-map-v2
+#   href: https://github.com/mugisus/design-library/tree/main/tokyo-coastline-railway-map-v2
+#   title: Tokyo Coastline Railway Map V2
+#   date: 2024-08-27
+
+# - id: tokyo-coastline-railway-map
+#   href: https://github.com/mugisus/design-library/tree/main/tokyo-coastline-railway-map
+#   title: Tokyo Coastline Railway Map
+#   date: 2024-04-26
+
+# - id: tokyo-kanagawa-3-in-1-railway-map
+#   href: https://github.com/mugisus/design-library/tree/main/tokyo-kanagawa-3-in-1-railway-map
+#   title: Tokyo-Kanagawa 3 in 1 Railway Map
+#   date: 2024-03-01
+
+# - id: sapporo-municipal-subway-fare-table
+#   href: https://github.com/mugisus/design-library/tree/main/sapporo-municipal-subway-fare-table
+#   title: Sapporo Municipal Subway Fare Table
+#   date: 2023-12-06
+
+- id: mitou-jr-demo-day-pamphlet-2023
+  href: https://github.com/mugisus/design-library/tree/main/mitoujr-demo-day-pamphlet-2023
+  title: A Pamphlet Design for Mitou Junior Demo Day 2023
+  date: 2023-11-03
+
+- id: portfolio-2023
+  href: https://mugisus-neue.vercel.app
+  title: Portfolio 2023
+  date: 2023-10-01
+
+- id: tshirt-design-for-mitou-jr-2023
+  href: https://github.com/mugisus/design-library/tree/main/tshirt-design-for-mitou-jr-2023
+  title: A T-Shirt Design for Mitou Junior 2023
+  date: 2023-07-22
+
+# - id: sotetsu-timetable-for-thru-services
+#   href: https://github.com/mugisus/design-library/tree/main/sotetsu-timetable-for-thru-services
+#   title: Sotetsu Timetable for Thru Services
+#   date: 2023-07-09
+
+# - id: v-card
+#   href: https://v-card-mugisus.vercel.app?22aq
+#   title: V-Card
+#   date: 2023-01-17
+
+# - id: pata-drop
+#   href: https://openprocessing.org/sketch/1788651
+#   title: pata-drop (openprocessing)
+#   date: 2023-01-09
+
+# - id: world-timestamp-npm-package
+#   href: https://www.npmjs.com/package/world-timestamp
+#   title: world-timestamp (npm package)
+#   date: 2022-10-14
+
+# - id: themostaccurateclockyoucanget
+#   href: https://themostaccurateclockyoucanget.vercel.app/
+#   title: The Most Accurate Clock You Can Get
+#   date: 2022-08-09
+
+# - id: react-mood
+#   href: https://reactmood.vercel.app/
+#   title: React:mood
+#   date: 2022-05-07
+
+- id: portfolio-2022
+  href: https://portfolio-mugisus-2022.vercel.app
+  title: Portfolio 2022 (mugisus.com)
+  date: 2022-04-22
+
+- id: neighbours
+  href: https://mugisus.github.io/neighbours/
+  title: Neighbours
+  date: 2022-04-12
+
+- id: genius
+  href: https://mugisus.github.io/genius/
+  title: GeNiUS
+  date: 2022-03-05
+
+# - id: lifegamejs-webgl
+#   href: https://mugisus.github.io/lifegameJS/
+#   title: lifegameJS (WebGL)
+#   date: 2021-12-24
+
+- id: telport
+  href: https://jr.mitou.org/projects/2021/telport
+  title: TELPort
+  date: 2021-11-03
+
+- id: 3d-arrow-and-ball-with-editor
+  href: https://scratch.mit.edu/projects/136146086/
+  title: "[3D] Arrow & Ball with editor!"
+  date: 2017-05-20
+
+- id: arrow-and-ball-with-editor
+  href: https://scratch.mit.edu/projects/45872854/
+  title: arrow & ball with editor!
+  date: 2015-02-09
+
+# - id: mmgiss-scratch
+#   href: https://scratch.mit.edu/users/MMGISS
+#   title: MMGISS (Scratch)
+#   date: 2014-06-02

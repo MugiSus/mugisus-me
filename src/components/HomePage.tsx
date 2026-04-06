@@ -5,9 +5,9 @@ export default function HomePage() {
   return (
     <main>
       <div class='fixed top-0 left-0 flex flex-col gap-0 p-12 text-4xl text-emerald-950'>
-        <p>MUGISUS</p>
-        <p>MINATO Masayuki</p>
-        <p class='my-0.5'>湊 真之</p>
+        <p>Mugisus</p>
+        <p>Masayuki Minato</p>
+        <p class='mt-4'>湊 真之</p>
       </div>
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>
@@ -28,11 +28,11 @@ export default function HomePage() {
         </A>
         <ul class='flex flex-col gap-2'>
           <li class='flex items-center gap-1'>
-            <a href='https://github.com/mugisus'>GitHub: mugisus</a>
+            <a href='https://github.com/mugisus'>GitHub</a>
             <ArrowUpRightIcon stroke-width={1.5} size={32} />
           </li>
           <li class='flex items-center gap-1'>
-            <a href='https://twitter.com/mugisus'>X: mugisus</a>
+            <a href='https://twitter.com/mugisus'>X</a>
             <ArrowUpRightIcon stroke-width={1.5} size={32} />
           </li>
         </ul>
