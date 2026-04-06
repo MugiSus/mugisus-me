@@ -4,10 +4,10 @@ import { ArrowUpRightIcon } from 'lucide-solid';
 export default function Home() {
   return (
     <main>
-      <div class='fixed top-0 right-0 flex flex-col items-end gap-0 p-12 text-4xl text-emerald-950'>
+      <div class='fixed top-0 left-0 flex flex-col gap-0 p-12 text-4xl text-emerald-950'>
         <p>MUGISUS</p>
         <p>MINATO Masayuki</p>
-        <p class='my-1'>湊 真之</p>
+        <p class='my-0.5'>湊 真之</p>
       </div>
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>
