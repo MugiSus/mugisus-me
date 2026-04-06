@@ -5,9 +5,9 @@ export default function HomePage() {
   return (
     <main>
       <div class='fixed top-0 left-0 flex flex-col gap-0 p-12 text-4xl text-emerald-950'>
-        <p>Mugisus</p>
+        <p>MUGISUS</p>
         <p>Masayuki Minato</p>
-        <p class='mt-4'>湊 真之</p>
+        <p class='mt-1.5'>湊 真之</p>
       </div>
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>

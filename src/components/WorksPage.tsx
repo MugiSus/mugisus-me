@@ -9,8 +9,8 @@ interface WorksPageProps {
 
 export default function WorksPage(props: WorksPageProps) {
   return (
-    <main>
-      <ul class='flex min-h-screen flex-col gap-48 p-12 pb-96 text-3xl'>
+    <main class='overflow-clip'>
+      <ul class='flex w-max flex-none flex-col gap-32 overflow-clip p-12 pb-[50lvh] text-3xl'>
         <li class='sticky top-12 mb-auto'>
           <A href='/' class='flex items-center gap-2'>
             <ArrowLeftIcon stroke-width={1.5} size={32} />
@@ -19,7 +19,7 @@ export default function WorksPage(props: WorksPageProps) {
         </li>
         <For each={props.works}>
           {(work) => (
-            <li class='flex items-baseline gap-2'>
+            <li class='flex items-baseline gap-2 whitespace-nowrap'>
               {work.href ? (
                 <a
                   href={work.href}
