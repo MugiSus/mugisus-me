@@ -9,6 +9,33 @@ export default createHandler(() => (
           <meta charset='utf-8' />
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
+          <link rel='apple-touch-icon' href='/apple-icon.png' />
+          <title>mugisus</title>
+          <meta
+            name='description'
+            content='The portfolio of mugisus. / mugisusのポートフォリオです。'
+          />
+          <meta
+            name='keywords'
+            content='mugisus, 湊真之, 湊, 真之, Minato Masayuki, Masayuki Minato, Minato, Masayuki'
+          />
+          <meta property='og:title' content='mugisus / ムギスス' />
+          <meta property='og:description' content='The portfolio of mugisus' />
+          <meta property='og:type' content='article' />
+          <meta property='og:url' content='https://mugisus.com/' />
+          <meta property='og:image' content='https://mugisus.com/image.png' />
+          <meta
+            property='article:published_time'
+            content='2026-04-07T09:00:00Z'
+          />
+          <meta
+            property='article:modified_time'
+            content='2026-04-07T09:00:00Z'
+          />
+          <meta name='twitter:card' content='summary' />
+          <meta name='twitter:site' content='@mugisus' />
+          <meta name='twitter:creator' content='@mugisus' />
+          <meta name='twitter:title' content='mugisus' />
           {assets}
         </head>
         <body>
