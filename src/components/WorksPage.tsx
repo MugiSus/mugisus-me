@@ -10,13 +10,14 @@ interface WorksPageProps {
 export default function WorksPage(props: WorksPageProps) {
   return (
     <main class='overflow-clip'>
-      <ul class='flex w-max flex-none flex-col gap-32 overflow-clip p-12 pb-[50lvh] text-3xl'>
-        <li class='sticky top-12 mb-auto'>
-          <A href='/' class='flex items-center gap-2'>
-            <ArrowLeftIcon stroke-width={1.5} size={32} />
-            Back
-          </A>
-        </li>
+      <A
+        href='/'
+        class='fixed top-0 left-0 flex items-center gap-2 p-12 text-3xl'
+      >
+        <ArrowLeftIcon stroke-width={1.5} size={32} />
+        Back
+      </A>
+      <ul class='flex w-max flex-none flex-col gap-16 overflow-clip p-12 py-[50svh] text-3xl'>
         <For each={props.works}>
           {(work) => (
             <li class='flex items-baseline gap-2 whitespace-nowrap'>
