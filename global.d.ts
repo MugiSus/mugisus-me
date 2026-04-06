@@ -14,3 +14,10 @@ declare module '*.yaml?raw' {
   const content: string;
   export default content;
 }
+
+declare module '*.svg?component-solid' {
+  import type { Component, ComponentProps } from 'solid-js';
+
+  const content: Component<ComponentProps<'svg'>>;
+  export default content;
+}

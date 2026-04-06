@@ -1,10 +1,5 @@
 @import "tailwindcss";
 
-:root {
-  --background-rgb: 34, 88, 66;
-  --foreground-rgb: 0, 0, 0;
-}
-
 /* @media (prefers-color-scheme: dark) {
   :root {
     --background-rgb: 0, 0, 0;
@@ -12,13 +7,31 @@
   }
 } */
 
+::selection {
+  @apply bg-emerald-950 text-emerald-500;
+}
+
 body {
-  background: rgb(var(--background-rgb));
-  color: rgb(var(--foreground-rgb));
+  background: #82A52C;
+  /* color: rgb(var(--foreground-rgb)); */
   font-family: neue-haas-grotesk-display, yu-gothic-pr6n, Arial, Helvetica, sans-serif;
   @apply text-emerald-950 tracking-wide font-bold;
 }
 
 a {
   @apply underline underline-offset-4 decoration-[1.5px] decoration-dashed;
+}
+
+@theme {
+  --animate-fade-in: fade-in 3s ease-out both;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
 }

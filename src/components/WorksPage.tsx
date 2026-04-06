@@ -12,7 +12,7 @@ export default function WorksPage(props: WorksPageProps) {
     <main class='overflow-clip'>
       <A
         href='/'
-        class='fixed top-0 left-0 flex items-start gap-2 p-12 text-3xl'
+        class='fixed top-0 left-0 m-12 flex items-start gap-2 text-3xl'
       >
         <ArrowLeftIcon stroke-width={1.5} size={32} />
         Back

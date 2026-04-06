@@ -65,7 +65,7 @@ export default function GradientBackground() {
   return (
     <canvas
       ref={(el) => (canvasRef = el)}
-      class='pointer-events-none fixed top-0 left-0 -z-10 h-full w-full'
+      class='animate-fade-in pointer-events-none fixed top-0 left-0 -z-10 h-full w-full [animation-delay:3s]'
     />
   );
 }
