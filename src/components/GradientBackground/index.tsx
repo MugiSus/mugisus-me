@@ -4,14 +4,18 @@ import fragmentShader from './fragment.frag?raw';
 import vertexShader from './vertex.vert?raw';
 
 export default function GradientBackground() {
-  let canvasRef!: HTMLCanvasElement;
+  let canvasRef: HTMLCanvasElement | undefined;
   let reqId: number;
 
   onMount(() => {
     // We only want to run three.js code on the client
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !canvasRef) return;
 
-    const renderer = new THREE.WebGLRenderer({ canvas: canvasRef, alpha: true, antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvasRef,
+      alpha: true,
+      antialias: true,
+    });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
@@ -60,8 +64,8 @@ export default function GradientBackground() {
 
   return (
     <canvas
-      ref={canvasRef}
-      class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none"
+      ref={(el) => (canvasRef = el)}
+      class='pointer-events-none fixed top-0 left-0 -z-10 h-full w-full'
     />
   );
 }
