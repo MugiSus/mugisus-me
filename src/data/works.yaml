@@ -3,6 +3,11 @@
   title: Portfolio 2026
   date: 2026-04-07
 
+- id: wakita-lab-website
+  href: https://wakita.sfc.keio.ac.jp/
+  title: Akira Wakita Lab. Keio Univ. Website
+  date: 2026-01-19
+
 - id: sign-system-me
   href: https://signsystemme.vercel.app/
   title: Sign System Me

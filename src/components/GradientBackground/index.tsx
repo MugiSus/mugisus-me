@@ -40,7 +40,7 @@ export default function GradientBackground() {
     const clock = new THREE.Clock();
 
     const render = () => {
-      material.uniforms.uTime.value = (clock.getElapsedTime() % 6000) / 200;
+      material.uniforms.uTime.value = (clock.getElapsedTime() % 6000) / 400;
       material.uniforms.uScroll.value = window.scrollY;
       renderer.render(scene, camera);
       reqId = requestAnimationFrame(render);

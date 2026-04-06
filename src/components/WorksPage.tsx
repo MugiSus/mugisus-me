@@ -12,7 +12,7 @@ export default function WorksPage(props: WorksPageProps) {
     <main class='overflow-clip'>
       <A
         href='/'
-        class='fixed top-0 left-0 flex items-center gap-2 p-12 text-3xl'
+        class='fixed top-0 left-0 flex items-start gap-2 p-12 text-3xl'
       >
         <ArrowLeftIcon stroke-width={1.5} size={32} />
         Back
@@ -34,7 +34,7 @@ export default function WorksPage(props: WorksPageProps) {
               ) : (
                 <p>{work.title}</p>
               )}
-              <time class='w-24 text-base font-bold'>
+              <time class='w-24 text-lg font-extrabold'>
                 {work.date.replaceAll('-', '.')}
               </time>
             </li>

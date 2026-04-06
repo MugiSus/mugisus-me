@@ -16,7 +16,7 @@ body {
   background: rgb(var(--background-rgb));
   color: rgb(var(--foreground-rgb));
   font-family: neue-haas-grotesk-display, yu-gothic-pr6n, Arial, Helvetica, sans-serif;
-  @apply text-emerald-950 tracking-wide;
+  @apply text-emerald-950 tracking-wide font-bold;
 }
 
 a {
