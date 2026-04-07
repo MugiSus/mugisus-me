@@ -12,28 +12,46 @@ export default function HomePage() {
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>
         <ul class='flex flex-col gap-2'>
-          <li class='flex items-center gap-1'>
-            <a href='https://tmacyes.vercel.app'>
+          <li>
+            <a
+              href='https://tmacyes.vercel.app'
+              class='flex w-fit items-center gap-1'
+            >
               themostaccurateclockyouveeverseen
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
-            <ArrowUpRightIcon stroke-width={1.5} size={32} />
           </li>
-          <li class='flex items-center gap-1'>
-            <a href='https://signsystemme.vercel.app'>s.s.m.</a>
-            <ArrowUpRightIcon stroke-width={1.5} size={32} />
+          <li>
+            <a
+              href='https://signsystemme.vercel.app'
+              class='flex w-fit items-center gap-1'
+            >
+              s.s.m.
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
           </li>
         </ul>
         <A href='/works' class='w-fit'>
           others
         </A>
         <ul class='flex flex-col gap-2'>
-          <li class='flex items-center gap-1'>
-            <a href='https://github.com/mugisus'>GitHub</a>
-            <ArrowUpRightIcon stroke-width={1.5} size={32} />
+          <li>
+            <a
+              href='https://github.com/mugisus'
+              class='flex w-fit items-center gap-1'
+            >
+              GitHub
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
           </li>
-          <li class='flex items-center gap-1'>
-            <a href='https://twitter.com/mugisus'>X</a>
-            <ArrowUpRightIcon stroke-width={1.5} size={32} />
+          <li>
+            <a
+              href='https://twitter.com/mugisus'
+              class='flex w-fit items-center gap-1'
+            >
+              X
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
           </li>
         </ul>
       </div>
