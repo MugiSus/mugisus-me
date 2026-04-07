@@ -1,6 +1,6 @@
 // reference: https://gist.github.com/patriciogonzalezvivo/670c22f3966e662d2f83
 
-precision mediump float;
+precision highp float;
 
 uniform float uTime;
 uniform float uScroll;
