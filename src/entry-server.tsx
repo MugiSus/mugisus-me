@@ -11,16 +11,14 @@ export default createHandler(() => (
           <link rel='icon' href='/favicon.ico' />
           <link rel='apple-touch-icon' href='/apple-icon.png' />
           <title>mugisus</title>
-          <meta
-            name='description'
-            content='The portfolio of mugisus. / mugisusのポートフォリオです。'
-          />
+          <meta name='description' content='A portfolio of mugisus' />
           <meta
             name='keywords'
             content='mugisus, 湊真之, 湊, 真之, Minato Masayuki, Masayuki Minato, Minato, Masayuki'
           />
-          <meta property='og:title' content='mugisus / ムギスス' />
-          <meta property='og:description' content='The portfolio of mugisus' />
+          <meta property='og:title' content='mugisus' />
+          {/* <meta property='og:description' content='A portfolio of mugisus' /> */}
+          <meta property='og:description' content='' />
           <meta property='og:type' content='article' />
           <meta property='og:url' content='https://mugisus.com/' />
           <meta property='og:image' content='https://mugisus.com/image.png' />
