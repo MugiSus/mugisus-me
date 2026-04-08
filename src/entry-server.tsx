@@ -34,6 +34,7 @@ export default createHandler(() => (
           <meta name='twitter:site' content='@mugisus' />
           <meta name='twitter:creator' content='@mugisus' />
           <meta name='twitter:title' content='mugisus' />
+          <link rel='stylesheet' href='https://use.typekit.net/gvk7ucm.css' />
           {assets}
         </head>
         <body>

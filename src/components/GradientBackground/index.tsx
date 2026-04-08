@@ -12,7 +12,7 @@ export default function GradientBackground() {
 
   onMount(() => {
     // We only want to run three.js code on the client
-    if (typeof window === 'undefined' || !canvasRef) return;
+    if (!canvasRef) return;
 
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef,
