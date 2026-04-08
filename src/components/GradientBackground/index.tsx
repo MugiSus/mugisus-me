@@ -3,6 +3,14 @@ import * as THREE from 'three';
 import fragmentShader from './fragment.frag?raw';
 import vertexShader from './vertex.vert?raw';
 
+const SAMPLE_COLORS = [
+  0xfe4a49, 0xfed766, 0x009fb7, 0xe6e6ea, 0xf4f4f8,
+].flatMap((hex) => [
+  ((hex >> 16) & 0xff) / 255,
+  ((hex >> 8) & 0xff) / 255,
+  (hex & 0xff) / 255,
+]);
+
 export default function GradientBackground() {
   const [isReady, setIsReady] = createSignal(false);
   let canvasRef: HTMLCanvasElement | undefined;
@@ -30,7 +38,7 @@ export default function GradientBackground() {
       uniforms: {
         uTime: { value: 0 },
         uScroll: { value: 0 },
-        uColors: { value: [0xfe4a49, 0xfed766, 0x009fb7, 0xe6e6ea, 0xf4f4f8] },
+        uColors: { value: SAMPLE_COLORS },
       },
     });
 
