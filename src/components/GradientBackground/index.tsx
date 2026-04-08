@@ -30,8 +30,7 @@ export default function GradientBackground() {
       uniforms: {
         uTime: { value: 0 },
         uScroll: { value: 0 },
-        uColor1: { value: [220 / 255, 242 / 255, 20 / 255] },
-        uColor2: { value: [77 / 255, 123 / 255, 56 / 255] },
+        uColors: { value: [0xfe4a49, 0xfed766, 0x009fb7, 0xe6e6ea, 0xf4f4f8] },
       },
     });
 

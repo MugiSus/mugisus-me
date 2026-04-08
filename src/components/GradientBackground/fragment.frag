@@ -4,12 +4,29 @@ precision highp float;
 
 uniform float uTime;
 uniform float uScroll;
+uniform int uColors[5];
 
-uniform vec3 uColor1;
-uniform vec3 uColor2;
+const float COLOR_STEPS = 5.0;
 
 vec4 permute(vec4 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
 vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
+
+vec3 hexToRgb(int hex) {
+  float value = float(hex);
+  float r = floor(value / 65536.0);
+  float g = floor(mod(value, 65536.0) / 256.0);
+  float b = mod(value, 256.0);
+
+  return vec3(r, g, b) / 255.0;
+}
+
+vec3 paletteColor(int index) {
+  if (index <= 0) return hexToRgb(uColors[0]);
+  if (index == 1) return hexToRgb(uColors[1]);
+  if (index == 2) return hexToRgb(uColors[2]);
+  if (index == 3) return hexToRgb(uColors[3]);
+  return hexToRgb(uColors[4]);
+}
 
 float snoise(vec3 v) { 
   const vec2  C = vec2(1.0 / 6.0, 1.0 / 3.0);
@@ -82,11 +99,8 @@ void main(void) {
   float val = snoise(vec3(pos.x, pos.y, uTime + uScroll / 6400.0));
   float vnorm = (val + 1.0) / 2.0;
 
-  float step = 12.0;
-  float x = mod(vnorm, 1.0 / step) * step;
-
-  float a = clamp(floor(vnorm * step) / step - x * x * x * 0.02, 0.0, 1.0);
-  vec3 color = mix(uColor2, uColor1, a);
+  int colorIndex = int(min(floor(vnorm * COLOR_STEPS), COLOR_STEPS - 1.0));
+  vec3 color = paletteColor(colorIndex);
 
   gl_FragColor = vec4(color, 1.0);
 }
