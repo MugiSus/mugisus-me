@@ -26,7 +26,16 @@ export default function GradientBackground() {
       antialias: true,
     });
     renderer.setPixelRatio(window.devicePixelRatio);
-    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const resizeRendererToCanvas = () => {
+      if (!canvasRef) return;
+
+      const { clientWidth, clientHeight } = canvasRef;
+      if (clientWidth === 0 || clientHeight === 0) return;
+      renderer.setSize(clientWidth, clientHeight, false);
+    };
+
+    resizeRendererToCanvas();
 
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
@@ -64,14 +73,17 @@ export default function GradientBackground() {
     reqId = requestAnimationFrame(render);
 
     const handleResize = () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      resizeRendererToCanvas();
       renderFrame();
     };
-    window.addEventListener('resize', handleResize);
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(canvasRef);
+    window.addEventListener('orientationchange', handleResize);
 
     onCleanup(() => {
       cancelAnimationFrame(reqId);
-      window.removeEventListener('resize', handleResize);
+      resizeObserver.disconnect();
+      window.removeEventListener('orientationchange', handleResize);
       renderer.dispose();
       geometry.dispose();
       material.dispose();
