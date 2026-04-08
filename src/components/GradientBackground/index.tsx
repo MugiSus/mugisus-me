@@ -4,12 +4,8 @@ import fragmentShader from './fragment.frag?raw';
 import vertexShader from './vertex.vert?raw';
 
 const SAMPLE_COLORS = [
-  0xfe4a49, 0xfed766, 0x009fb7, 0xe6e6ea, 0xf4f4f8,
-].flatMap((hex) => [
-  ((hex >> 16) & 0xff) / 255,
-  ((hex >> 8) & 0xff) / 255,
-  (hex & 0xff) / 255,
-]);
+  0xe0e0e8, 0xaac800, 0xdcf216, 0xe6e6ea, 0xf4f4f8, 0xab38d5, 0xdbdbde,
+];
 
 export default function GradientBackground() {
   const [isReady, setIsReady] = createSignal(false);
@@ -47,7 +43,13 @@ export default function GradientBackground() {
       uniforms: {
         uTime: { value: 0 },
         uScroll: { value: 0 },
-        uColors: { value: SAMPLE_COLORS },
+        uColors: {
+          value: SAMPLE_COLORS.flatMap((hex) => [
+            ((hex >> 16) & 0xff) / 255,
+            ((hex >> 8) & 0xff) / 255,
+            (hex & 0xff) / 255,
+          ]),
+        },
       },
     });
 
@@ -57,7 +59,8 @@ export default function GradientBackground() {
     const clock = new THREE.Timer();
 
     const renderFrame = () => {
-      material.uniforms.uTime.value = (clock.getElapsed() % 6000) / 400;
+      clock.update();
+      material.uniforms.uTime.value = (clock.getElapsed() % 6000) / 300;
       material.uniforms.uScroll.value = window.scrollY;
       renderer.render(scene, camera);
     };

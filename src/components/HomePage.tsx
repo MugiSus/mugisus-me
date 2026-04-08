@@ -4,7 +4,7 @@ import { ArrowUpRightIcon } from 'lucide-solid';
 export default function HomePage() {
   return (
     <main>
-      <div class='fixed top-0 left-0 flex flex-col gap-0.5 p-12 text-4xl font-medium text-emerald-950'>
+      <div class='fixed top-0 left-0 flex flex-col gap-0.5 p-12 text-4xl font-medium'>
         <h1>
           <A href='/'>mugisus</A>
         </h1>
@@ -13,7 +13,7 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl text-emerald-950'>
+      <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl'>
         <ul class='flex flex-col gap-2'>
           <li>
             <a

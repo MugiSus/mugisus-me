@@ -8,14 +8,14 @@
 } */
 
 ::selection {
-  @apply bg-emerald-950 text-emerald-500;
+  @apply bg-emerald-900 text-emerald-500;
 }
 
 body {
   background: #82A52C;
   /* color: rgb(var(--foreground-rgb)); */
   font-family: neue-haas-grotesk-display, toppan-bunkyu-midashi-go-std, Arial, Helvetica, sans-serif;
-  @apply text-emerald-950 tracking-wide font-medium;
+  @apply text-emerald-900 tracking-wide font-medium;
 }
 
 a {
