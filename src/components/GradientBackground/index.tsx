@@ -81,7 +81,7 @@ export default function GradientBackground() {
   return (
     <canvas
       ref={(el) => (canvasRef = el)}
-      class='pointer-events-none fixed top-0 left-0 -z-10 h-full w-full transition-opacity duration-5000 ease-in-out'
+      class='pointer-events-none fixed top-0 left-0 -z-50 h-lvh w-lvw transition-opacity duration-5000 ease-in-out'
       classList={{
         'opacity-0': !isReady(),
         'opacity-100': isReady(),
