@@ -11,11 +11,11 @@ const float COLOR_STEPS = 5.0;
 vec4 permute(vec4 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
 vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
 
-vec3 paletteColor(int index) {
-  if (index <= 0) return uColors[0];
-  if (index == 1) return uColors[1];
-  if (index == 2) return uColors[2];
-  if (index == 3) return uColors[3];
+vec3 paletteColor(float index) {
+  if (index <= 1.0) return uColors[0];
+  if (index <= 2.0) return uColors[1];
+  if (index <= 3.0) return uColors[2];
+  if (index <= 4.0) return uColors[3];
   return uColors[4];
 }
 
@@ -88,10 +88,15 @@ void main(void) {
   vec2 pos = gl_FragCoord.xy / 3200.0 + vec2(uTime / 5.0, uTime / 5.0 + uScroll / -4800.0);
 
   float val = snoise(vec3(pos.x, pos.y, uTime + uScroll / 6400.0));
-  float vnorm = (val + 1.0) / 2.0;
+  float noisenorm = (val + 1.0) / 2.0;
 
-  int colorIndex = int(min(floor(vnorm * COLOR_STEPS), COLOR_STEPS - 1.0));
-  vec3 color = paletteColor(colorIndex);
+  vec3 color = paletteColor(noisenorm * COLOR_STEPS);
+  
+  // float x = fract(noisenorm * COLOR_STEPS);
+  // float shadowstrength = x * x * x;
+  // float shadow = 1.0 - shadowstrength * 0.05;
+
+  // color *= shadow;
 
   gl_FragColor = vec4(color, 1.0);
 }
