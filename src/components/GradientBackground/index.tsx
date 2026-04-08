@@ -3,9 +3,7 @@ import * as THREE from 'three';
 import fragmentShader from './fragment.frag?raw';
 import vertexShader from './vertex.vert?raw';
 
-const SAMPLE_COLORS = [
-  0xe0e0e8, 0xaac800, 0xdcf216, 0xe6e6ea, 0xf4f4f8, 0xab38d5, 0xdbdbde,
-];
+const SAMPLE_COLORS = [0xfe4a49, 0xfed766, 0x009fb7, 0xe6e6ea, 0xf4f4f8];
 
 export default function GradientBackground() {
   const [isReady, setIsReady] = createSignal(false);
@@ -60,7 +58,7 @@ export default function GradientBackground() {
 
     const renderFrame = () => {
       clock.update();
-      material.uniforms.uTime.value = (clock.getElapsed() % 6000) / 300;
+      material.uniforms.uTime.value = (clock.getElapsed() % 6000) / 400;
       material.uniforms.uScroll.value = window.scrollY;
       renderer.render(scene, camera);
     };

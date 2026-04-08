@@ -4,24 +4,19 @@ precision highp float;
 
 uniform float uTime;
 uniform float uScroll;
-uniform vec3 uColors[7];
+uniform vec3 uColors[5];
 
-const float COLOR_STEPS = 7.0;
+const float COLOR_STEPS = 5.0;
 
 vec4 permute(vec4 x) { return mod(((x * 34.0) + 1.0) * x, 289.0); }
 vec4 taylorInvSqrt(vec4 r) { return 1.79284291400159 - 0.85373472095314 * r; }
 
 vec3 paletteColor(float index) {
-  if (index <= 4.0) {
-    if (index <= 1.0) return uColors[0];
-    if (index <= 2.0) return uColors[1];
-    if (index <= 3.0) return uColors[2];
-    return uColors[3];
-  } else {
-    if (index <= 5.0) return uColors[4];
-    if (index <= 6.0) return uColors[5];
-    return uColors[6];
-  }
+  if (index <= 1.0) return uColors[0];
+  if (index <= 2.0) return uColors[1];
+  if (index <= 3.0) return uColors[2];
+  if (index <= 4.0) return uColors[3];
+  return uColors[4];
 }
 
 float snoise(vec3 v) { 
