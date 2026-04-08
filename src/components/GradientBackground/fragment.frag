@@ -77,9 +77,9 @@ float snoise(vec3 v) {
 }
 
 void main(void) {
-  vec2 pos = gl_FragCoord.xy / 3200.0 + vec2(uTime / 5.0, uTime / 5.0 + uScroll / -2400.0);
+  vec2 pos = gl_FragCoord.xy / 3200.0 + vec2(uTime / 5.0, uTime / 5.0 + uScroll / -4800.0);
 
-  float val = snoise(vec3(pos.x, pos.y, uTime + uScroll / 4800.0));
+  float val = snoise(vec3(pos.x, pos.y, uTime + uScroll / 6400.0));
   float vnorm = (val + 1.0) / 2.0;
 
   float step = 12.0;
