@@ -58,7 +58,7 @@ export default function GradientBackground() {
 
     const renderFrame = () => {
       clock.update();
-      material.uniforms.uTime.value = (clock.getElapsed() % 6000) / 400;
+      material.uniforms.uTime.value = clock.getElapsed() % 600;
       material.uniforms.uScroll.value = window.scrollY;
       renderer.render(scene, camera);
     };
