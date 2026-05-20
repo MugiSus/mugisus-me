@@ -20,7 +20,7 @@ export default function HomePage() {
               href='https://fontcluster.mugisus.me'
               class='flex w-fit items-center gap-1'
             >
-              FontCluster
+              FontCluster (Beta)
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
