@@ -17,6 +17,15 @@ export default function HomePage() {
         <ul class='flex flex-col gap-2'>
           <li>
             <a
+              href='https://fontcluster.mugisus.me'
+              class='flex w-fit items-center gap-1'
+            >
+              FontCluster
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
+          <li>
+            <a
               href='https://tmacyes.vercel.app'
               class='flex w-fit items-center gap-1'
             >
@@ -29,7 +38,7 @@ export default function HomePage() {
               href='https://signsystemme.vercel.app'
               class='flex w-fit items-center gap-1'
             >
-              s.s.m.
+              S.S.M.
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
