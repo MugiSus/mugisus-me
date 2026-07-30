@@ -104,13 +104,13 @@ void main() {
   );
   vec2 warp = vec2(
     snoise(
-      noisePosition * 1.5 + vec3(17.17, 31.73, 47.29)
+      noisePosition * 2.0 + vec3(17.17, 31.73, 47.29)
     ),
     snoise(
-      noisePosition * 1.5 + vec3(59.31, 23.57, 11.19)
+      noisePosition * 2.0 + vec3(59.31, 23.57, 11.19)
     )
   );
 
-  vNoise = snoise(noisePosition + vec3(warp * 0.25, 0.0));
+  vNoise = snoise(noisePosition + vec3(warp * 0.3, 0.0));
   gl_Position = vec4(position, 1.0);
 }
