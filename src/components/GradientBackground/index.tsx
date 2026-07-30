@@ -41,7 +41,7 @@ export default function GradientBackground() {
     // The noise field changes at a 2400px scale, so evaluating it on this
     // screen-space grid preserves its contours without running simplex noise
     // independently for every physical display pixel.
-    const geometry = new THREE.PlaneGeometry(2, 2, 256, 144);
+    const geometry = new THREE.PlaneGeometry(2, 2, 512, 288);
     const material = new THREE.RawShaderMaterial({
       fragmentShader,
       vertexShader,

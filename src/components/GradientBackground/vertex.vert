@@ -98,9 +98,19 @@ void main() {
   vec2 pos =
     pixelPosition / 2400.0 +
     vec2(uTime * 0.005, uTime * -0.001 + uScroll / -4800.0);
-
-  vNoise = snoise(
-    vec3(pos, uTime * 0.002 + uScroll / 6400.0)
+  vec3 noisePosition = vec3(
+    pos,
+    uTime * 0.002 + uScroll / 6400.0
   );
+  vec2 warp = vec2(
+    snoise(
+      noisePosition * 1.5 + vec3(17.17, 31.73, 47.29)
+    ),
+    snoise(
+      noisePosition * 1.5 + vec3(59.31, 23.57, 11.19)
+    )
+  );
+
+  vNoise = snoise(noisePosition + vec3(warp * 0.25, 0.0));
   gl_Position = vec4(position, 1.0);
 }
