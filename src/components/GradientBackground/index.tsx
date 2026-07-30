@@ -16,10 +16,13 @@ export default function GradientBackground() {
 
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef,
-      alpha: true,
-      antialias: true,
+      alpha: false,
+      antialias: false,
+      depth: false,
+      stencil: false,
     });
     renderer.setPixelRatio(window.devicePixelRatio);
+    const resolution = new THREE.Vector2();
 
     const resizeRendererToCanvas = () => {
       if (!canvasRef) return;
@@ -27,6 +30,7 @@ export default function GradientBackground() {
       const { clientWidth, clientHeight } = canvasRef;
       if (clientWidth === 0 || clientHeight === 0) return;
       renderer.setSize(clientWidth, clientHeight, false);
+      renderer.getDrawingBufferSize(resolution);
     };
 
     resizeRendererToCanvas();
@@ -34,11 +38,15 @@ export default function GradientBackground() {
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
 
-    const geometry = new THREE.PlaneGeometry(2, 2);
+    // The noise field changes at a 2400px scale, so evaluating it on this
+    // screen-space grid preserves its contours without running simplex noise
+    // independently for every physical display pixel.
+    const geometry = new THREE.PlaneGeometry(2, 2, 256, 144);
     const material = new THREE.RawShaderMaterial({
       fragmentShader,
       vertexShader,
       uniforms: {
+        uResolution: { value: resolution },
         uTime: { value: 0 },
         uScroll: { value: 0 },
         uColors: {
