@@ -35,6 +35,11 @@ export default createHandler(() => (
           <meta name='twitter:creator' content='@mugisus' />
           <meta name='twitter:title' content='mugisus' />
           <link rel='stylesheet' href='https://use.typekit.net/gvk7ucm.css' />
+
+          <meta
+            name='viewport'
+            content='width=device-width, initial-scale=1, viewport-fit=cover'
+          />
           {assets}
         </head>
         <body>

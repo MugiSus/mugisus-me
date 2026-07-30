@@ -12,7 +12,7 @@
 }
 
 body {
-  background: #82A52C;
+  background: #ffffff00;
   /* color: rgb(var(--foreground-rgb)); */
   font-family: neue-haas-grotesk-display, toppan-bunkyu-midashi-go-std, Arial, Helvetica, sans-serif;
   @apply text-emerald-900 tracking-wide font-medium;

@@ -17,23 +17,25 @@ export default function WorksPage(props: WorksPageProps) {
         <ArrowLeftIcon stroke-width={1.5} size={32} />
         Back
       </A>
-      <ul class='flex w-max flex-none flex-col gap-16 overflow-clip p-12 py-[50svh] text-3xl'>
+      <ul class='flex w-max flex-none flex-col gap-12 overflow-clip p-12 py-[50svh] text-3xl md:gap-16'>
         <For each={props.works}>
           {(work) => (
-            <li class='flex items-baseline gap-2 whitespace-nowrap'>
-              {work.href ? (
-                <a
-                  href={work.href}
-                  class='flex items-center gap-1'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  <span>{work.title}</span>
-                  <ArrowUpRightIcon stroke-width={1.5} size={32} />
-                </a>
-              ) : (
-                <p>{work.title}</p>
-              )}
+            <li class='flex flex-col items-baseline gap-0 md:flex-row'>
+              <div class='flex items-baseline gap-2 whitespace-nowrap'>
+                {work.href ? (
+                  <a
+                    href={work.href}
+                    class='flex items-center gap-1'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    <span>{work.title}</span>
+                    <ArrowUpRightIcon stroke-width={1.5} size={32} />
+                  </a>
+                ) : (
+                  <p>{work.title}</p>
+                )}
+              </div>
               <time class='w-24 text-lg font-semibold'>
                 {work.date.replaceAll('-', '.')}
               </time>
