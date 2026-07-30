@@ -1,5 +1,5 @@
 import { A } from '@solidjs/router';
-import { ArrowUpRightIcon } from 'lucide-solid';
+import { ArrowRightIcon, ArrowUpRightIcon } from 'lucide-solid';
 
 export default function HomePage() {
   return (
@@ -43,8 +43,9 @@ export default function HomePage() {
             </a>
           </li>
         </ul>
-        <A href='/works' class='w-fit'>
+        <A href='/works' class='flex w-fit items-center gap-1'>
           others
+          <ArrowRightIcon stroke-width={1.5} size={32} />
         </A>
         <ul class='flex flex-col gap-2'>
           <li>

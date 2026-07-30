@@ -1,5 +1,5 @@
 import { A } from '@solidjs/router';
-import { ArrowLeftIcon, ArrowUpRightIcon } from 'lucide-solid';
+import { ArrowUpRightIcon, Undo2Icon } from 'lucide-solid';
 import { For } from 'solid-js';
 import type { WorkSummary } from '~/lib/works';
 
@@ -14,7 +14,7 @@ export default function WorksPage(props: WorksPageProps) {
         href='/'
         class='fixed top-0 left-0 m-12 flex items-start gap-2 text-3xl'
       >
-        <ArrowLeftIcon stroke-width={1.5} size={32} />
+        <Undo2Icon stroke-width={1.5} size={32} />
         Back
       </A>
       <ul class='flex w-max flex-none flex-col gap-12 overflow-clip p-12 py-[50svh] text-3xl md:gap-16'>
