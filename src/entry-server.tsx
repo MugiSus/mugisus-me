@@ -28,7 +28,7 @@ export default createHandler(() => (
           />
           <meta
             property='article:modified_time'
-            content='2026-04-07T09:00:00Z'
+            content='2026-07-31T09:00:00Z'
           />
           <meta name='twitter:card' content='summary' />
           <meta name='twitter:site' content='@mugisus' />
