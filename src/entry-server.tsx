@@ -20,8 +20,8 @@ export default createHandler(() => (
           {/* <meta property='og:description' content='A portfolio of mugisus' /> */}
           <meta property='og:description' content='' />
           <meta property='og:type' content='article' />
-          <meta property='og:url' content='https://mugisus.com/' />
-          <meta property='og:image' content='https://mugisus.com/image.png' />
+          <meta property='og:url' content='https://mugisus.me/' />
+          <meta property='og:image' content='https://mugisus.me/image.png' />
           <meta
             property='article:published_time'
             content='2026-04-07T09:00:00Z'
