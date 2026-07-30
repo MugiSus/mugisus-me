@@ -97,7 +97,7 @@ void main() {
     (position.xy * 0.5 + 0.5) * uResolution + vec2(0.001, 0.002);
   vec2 pos =
     pixelPosition / 2400.0 +
-    vec2(uTime * 0.005, uTime * -0.001 + uScroll / -4800.0);
+    vec2(uTime * 0.005, uTime * -0.001 + uScroll / -9600.0);
   vec3 noisePosition = vec3(
     pos,
     uTime * 0.002 + uScroll / 6400.0
