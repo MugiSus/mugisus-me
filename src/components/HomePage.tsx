@@ -17,10 +17,28 @@ export default function HomePage() {
         <ul class='flex flex-col gap-2'>
           <li>
             <a
+              href='https://baseballtrade.mugisus.me'
+              class='flex w-fit items-center gap-1'
+            >
+              Baseball (MLB) Trade Track
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
+          <li>
+            <a
               href='https://fontcluster.mugisus.me'
               class='flex w-fit items-center gap-1'
             >
               FontCluster (Beta)
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://wakita.sfc.keio.ac.jp/'
+              class='flex w-fit items-center gap-1'
+            >
+              Akira Wakita Lab. Website
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
