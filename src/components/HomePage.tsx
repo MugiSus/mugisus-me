@@ -84,6 +84,15 @@ export default function HomePage() {
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
+          <li>
+            <a
+              href='https://www.instagram.com/mugisus_/'
+              class='flex w-fit items-center gap-1'
+            >
+              Instagram
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
         </ul>
       </div>
     </main>
