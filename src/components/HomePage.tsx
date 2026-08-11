@@ -26,15 +26,6 @@ export default function HomePage() {
           </li>
           <li>
             <a
-              href='https://fontcluster.mugisus.me'
-              class='flex w-fit items-center gap-1'
-            >
-              FontCluster (Beta)
-              <ArrowUpRightIcon stroke-width={1.5} size={32} />
-            </a>
-          </li>
-          <li>
-            <a
               href='https://wakita.sfc.keio.ac.jp/'
               class='flex w-fit items-center gap-1'
             >
@@ -44,19 +35,10 @@ export default function HomePage() {
           </li>
           <li>
             <a
-              href='https://tmacyes.vercel.app'
+              href='https://sundial.mugisus.me'
               class='flex w-fit items-center gap-1'
             >
-              themostaccurateclockyouveeverseen
-              <ArrowUpRightIcon stroke-width={1.5} size={32} />
-            </a>
-          </li>
-          <li>
-            <a
-              href='https://signsystemme.vercel.app'
-              class='flex w-fit items-center gap-1'
-            >
-              S.S.M.
+              Sundial
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
