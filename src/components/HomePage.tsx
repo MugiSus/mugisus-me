@@ -17,7 +17,7 @@ export default function HomePage() {
         <ul class='flex flex-col gap-2'>
           <li>
             <a
-              href='https://baseballtrade.mugisus.me'
+              href='https://baseballtrades.mugisus.me'
               class='flex w-fit items-center gap-1'
             >
               Baseball (MLB) Trade Track
