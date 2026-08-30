@@ -17,10 +17,10 @@ export default function HomePage() {
         <ul class='flex flex-col gap-2'>
           <li>
             <a
-              href='https://baseballtrades.mugisus.me'
+              href='https://waazu.mugisus.me'
               class='flex w-fit items-center gap-1'
             >
-              Baseball (MLB) Trade Track
+              WAAZU
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>
