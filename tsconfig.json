@@ -10,10 +10,12 @@
     "allowJs": true,
     "noEmit": true,
     "strict": true,
-    "types": ["vite/client"],
+    "skipLibCheck": true,
+    "types": ["vite/client", "node"],
     "isolatedModules": true,
     "paths": {
       "~/*": ["./src/*"]
     }
-  }
+  },
+  "include": ["src", "global.d.ts", "vite.config.ts"]
 }

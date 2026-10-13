@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 /* @media (prefers-color-scheme: dark) {
   :root {
@@ -14,10 +14,12 @@
 body {
   background: #ffffff00;
   /* color: rgb(var(--foreground-rgb)); */
-  font-family: neue-haas-grotesk-display, toppan-bunkyu-midashi-go-std, Arial, Helvetica, sans-serif;
-  @apply text-emerald-900 tracking-wide font-medium;
+  font-family:
+    neue-haas-grotesk-display, toppan-bunkyu-midashi-go-std, Arial, Helvetica,
+    sans-serif;
+  @apply font-bold tracking-wide text-emerald-900;
 }
 
 a {
-  @apply underline underline-offset-4 decoration-[1.5px] decoration-dashed;
+  @apply underline decoration-dashed decoration-[1.5px] underline-offset-4;
 }

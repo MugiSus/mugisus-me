@@ -1,5 +1,15 @@
 /// <reference types="@solidjs/start/env" />
 
+interface Window {
+  Typekit?: {
+    load(config: {
+      kitId: string;
+      scriptTimeout: number;
+      async: boolean;
+    }): void;
+  };
+}
+
 declare module '*.frag?raw' {
   const content: string;
   export default content;

@@ -1,0 +1,64 @@
+{
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "all",
+  "printWidth": 80,
+  "useTabs": false,
+  "endOfLine": "lf",
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "embeddedLanguageFormatting": "auto",
+  "htmlWhitespaceSensitivity": "strict",
+  "jsxSingleQuote": true,
+  "proseWrap": "always",
+  "quoteProps": "consistent",
+  "sortPackageJson": false,
+  "sortTailwindcss": {
+    "functions": ["clsx", "cn", "tw"],
+    "stylesheet": "./src/app.css"
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".pnpm-store/",
+    "dist/",
+    "build/",
+    "out/",
+    ".output/",
+    ".vinxi/",
+    "coverage/",
+    ".nyc_output/",
+    ".cache/",
+    ".parcel-cache/",
+    ".next/",
+    ".nuxt/",
+    ".DS_Store",
+    "Thumbs.db",
+    ".vscode/settings.json",
+    ".idea/",
+    "*.log",
+    "npm-debug.log*",
+    "yarn-debug.log*",
+    "yarn-error.log*",
+    "pnpm-debug.log*",
+    "pids",
+    "*.pid",
+    "*.seed",
+    "*.pid.lock",
+    ".env*",
+    ".gitignore",
+    ".vercel/",
+    ".nitro/",
+    "pnpm-lock.yaml"
+  ],
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "options": {
+        "printWidth": 120
+      }
+    }
+  ]
+}

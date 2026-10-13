@@ -28,8 +28,7 @@ export default function AdobeTypekitLoader(props: AdobeTypekitLoaderProps) {
       tk.onload = function () {
         clearTimeout(t);
         try {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          (window as any).Typekit.load(config);
+          window.Typekit?.load(config);
         } catch (e) {
           console.error(e);
         }

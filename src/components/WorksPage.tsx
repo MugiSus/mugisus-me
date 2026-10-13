@@ -36,9 +36,7 @@ export default function WorksPage(props: WorksPageProps) {
                   <p>{work.title}</p>
                 )}
               </div>
-              <time class='w-24 text-lg font-semibold'>
-                {work.date.replaceAll('-', '.')}
-              </time>
+              <time class='w-24 text-lg'>{work.date.replaceAll('-', '.')}</time>
             </li>
           )}
         </For>

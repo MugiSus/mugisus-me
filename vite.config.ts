@@ -1,10 +1,17 @@
 import { defineConfig } from 'vite';
-import { nitroV2Plugin as nitro } from '@solidjs/vite-plugin-nitro-2';
+import { nitro } from 'nitro/vite';
 import { solidStart } from '@solidjs/start/config';
-// import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  plugins: [solidStart(), nitro({ preset: 'vercel' })],
+  plugins: [tailwindcss(), solidStart(), nitro()],
+  nitro: {
+    preset: 'vercel',
+  },
+  optimizeDeps: {
+    // The lazy dev overlay needs its CommonJS dependencies pre-bundled.
+    include: ['@solidjs/start > @jridgewell/trace-mapping'],
+  },
   server: {
     host: true,
   },

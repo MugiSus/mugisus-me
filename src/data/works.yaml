@@ -1,3 +1,8 @@
+- id: archaeology-dep
+  href: https://archaeology.mugisus.me
+  title: archaeology.dep
+  date: 2026-10-09
+
 - id: waazu
   href: https://waazu.mugisus.me
   title: WAAZU
@@ -129,7 +134,7 @@
 
 - id: 3d-arrow-and-ball-with-editor
   href: https://scratch.mit.edu/projects/136146086/
-  title: "[3D] Arrow & Ball with editor!"
+  title: '[3D] Arrow & Ball with editor!'
   date: 2017-05-20
 
 - id: arrow-and-ball-with-editor

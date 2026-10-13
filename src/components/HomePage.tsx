@@ -4,7 +4,7 @@ import { ArrowRightIcon, ArrowUpRightIcon } from 'lucide-solid';
 export default function HomePage() {
   return (
     <main>
-      <div class='fixed top-0 left-0 flex flex-col gap-0.5 p-12 text-4xl font-medium'>
+      <div class='fixed top-0 left-0 flex flex-col gap-0.5 p-12 text-4xl'>
         <h1>
           <A href='/'>mugisus</A>
         </h1>
@@ -15,6 +15,15 @@ export default function HomePage() {
 
       <div class='fixed bottom-0 left-0 flex flex-col gap-12 p-12 text-3xl'>
         <ul class='flex flex-col gap-2'>
+          <li>
+            <a
+              href='https://archaeology.mugisus.me'
+              class='flex w-fit items-center gap-1'
+            >
+              archaeology.dep
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
           <li>
             <a
               href='https://waazu.mugisus.me'
@@ -39,6 +48,15 @@ export default function HomePage() {
               class='flex w-fit items-center gap-1'
             >
               Sundial
+              <ArrowUpRightIcon stroke-width={1.5} size={32} />
+            </a>
+          </li>
+          <li>
+            <a
+              href='https://signsystemme.vercel.app/'
+              class='flex w-fit items-center gap-1'
+            >
+              Sign System Me
               <ArrowUpRightIcon stroke-width={1.5} size={32} />
             </a>
           </li>

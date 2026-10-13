@@ -4,41 +4,35 @@
   "scripts": {
     "dev": "vite dev",
     "build": "vite build",
-    "start": "vite start",
+    "start": "vite preview",
     "preview": "vite preview",
-    "lint": "eslint src",
-    "lint:fix": "eslint src --fix",
-    "format": "prettier --write \"src/**/*.{ts,tsx,css,json}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,tsx,css,json}\""
+    "lint": "oxlint .",
+    "lint:fix": "oxlint . --fix",
+    "format": "oxfmt --write .",
+    "format:check": "oxfmt --check .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@solidjs/router": "^0.15.0",
-    "@solidjs/start": "2.0.0-alpha.2",
-    "@solidjs/vite-plugin-nitro-2": "^0.1.0",
-    "lucide-solid": "^1.7.0",
-    "solid-js": "^1.9.5",
-    "three": "^0.183.2",
-    "vite": "^7.0.0",
-    "yaml": "^2.8.3"
+    "@solidjs/router": "^1.0.0",
+    "@solidjs/start": "2.0.6",
+    "lucide-solid": "^1.55.0",
+    "nitro": "3.0.260903-beta",
+    "solid-js": "^1.9.17",
+    "three": "^0.186.1",
+    "vite": "^8.3.4",
+    "yaml": "^2.9.1"
   },
   "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@types/three": "^0.183.1",
-    "@typescript-eslint/eslint-plugin": "^8.58.0",
-    "@typescript-eslint/parser": "^8.58.0",
-    "eslint": "^10.2.0",
-    "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-solid": "^0.14.5",
-    "postcss": "^8.5.8",
-    "prettier": "^3.8.1",
-    "prettier-plugin-tailwindcss": "^0.7.2",
-    "tailwindcss": "^4.0.7",
-    "typescript": "^6.0.2",
-    "typescript-eslint": "^8.58.0"
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.6.5",
+    "@types/three": "^0.186.0",
+    "eslint-plugin-solid": "^0.18.1",
+    "oxfmt": "0.73.0",
+    "oxlint": "1.88.0",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
   },
   "engines": {
-    "node": ">=22"
+    "node": ">=24"
   }
 }
